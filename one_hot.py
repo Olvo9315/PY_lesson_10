@@ -9,7 +9,7 @@ data = pd.DataFrame({'whoAmI':lst})
 # print(data.head())
 
 # Преобразование в one-hot c get_dummies:
-one_hot_encoded = pd.get_dummies(data['whoAmI'])
+one_hot_encoded = pd.get_dummies(data['whoAmI']).astype(int)
 result = pd.concat([data, one_hot_encoded], axis=1)
 
 # Преобразование в one-hot без get_dummies:
